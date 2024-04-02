@@ -74,7 +74,7 @@ while True:
     setDevice1(False)
     time.sleep(2)
 
-while True:
+# while True:
     print("TEST SENSOR")
     print(readMoisture())
     time.sleep(1)
