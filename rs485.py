@@ -16,7 +16,7 @@ def getPort():
     return commPort
     # return "/dev/ttyUSB1"
 
-portName = "/dev/ttyUSB1"
+portName = getPort()
 print(portName)
 
 
@@ -38,11 +38,7 @@ def setDevice1(state):
     time.sleep(1)
     print(serial_read_data(ser))
 
-while True:
-    setDevice1(True)
-    time.sleep(2)
-    setDevice1(False)
-    time.sleep(2)
+
 
 
 def serial_read_data(ser):
@@ -72,6 +68,11 @@ def readMoisture():
     ser.write(soil_moisture)
     time.sleep(1)
     return serial_read_data(ser)
+while True:
+    setDevice1(True)
+    time.sleep(2)
+    setDevice1(False)
+    time.sleep(2)
 
 while True:
     print("TEST SENSOR")
