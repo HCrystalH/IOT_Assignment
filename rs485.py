@@ -76,7 +76,9 @@ while True:
 
 # while True:
     print("TEST SENSOR")
+    print("Test Moisture \n")
     print(readMoisture())
     time.sleep(1)
+    print("Test Temperature \n")
     print(readTemperature())
     time.sleep(1)
